@@ -14,8 +14,8 @@ A number is **prime** if it is greater than 1 and no number divides it other tha
 For example:
 
 ```script
-      873  = 3 * 3 * 97 
-    12056  = 2 * 2 * 2 * 11 * 137 
+      873  = 3 * 3 * 97
+    12056  = 2 * 2 * 2 * 11 * 137
 123123123  = 3 * 3 * 41 * 333667
 ```
 This fact is important enough to be called the [fundamental theorem of arithmetic](http://en.wikipedia.org/wiki/Fundamental_theorem_of_arithmetic).
