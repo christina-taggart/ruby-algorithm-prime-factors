@@ -2,15 +2,18 @@ require 'prime'
 
 # Wrapper method for prime_factors_recursive:
 def prime_factors(n)
- prime_factors = []
- primes = []
- Prime.each(n) { |prime| primes << prime }
- prime_factors_recursive(n, primes, prime_factors)
+ factors = []
+ prime_factors_recursive(n, factors)
 end
 
-def prime_factors_recursive(n, primes, prime_factors)
-  prime_factors << n if Prime.prime?(n)
-
+def prime_factors_recursive(n, factors)
+  factors << n if Prime.prime?(n)
+  Prime.each { |prime|
+    if n % prime == 0
+      factors << prime
+      prime_factors(n / prime)
+    end
+  }
 end
 
 #-----DRIVERS-----
